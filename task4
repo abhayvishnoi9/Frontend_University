@@ -1,1 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Adventure</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #10152e;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #080c20;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar-brand span {
+            color: #8b7cff;
+        }
+
+        .nav-link {
+            color: white;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #8b7cff;
+        }
+
+        /* Main section */
+        .home {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            padding: 50px 0;
+        }
+
+        .home h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .home h1 span {
+            color: #8b7cff;
+        }
+
+        .home p {
+            color: #ccccdd;
+            line-height: 1.7;
+            margin-top: 20px;
+        }
+
+        .btn-custom {
+            background-color: #7565ed;
+            color: white;
+            padding: 10px 22px;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #5848cc;
+            color: white;
+        }
+
+        /* Rocket animation */
+        .rocket-box {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .rocket {
+            font-size: 110px;
+            display: inline-block;
+            animation: moveRocket 3s infinite ease-in-out;
+        }
+
+        @keyframes moveRocket {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-25px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Features */
+        .features {
+            padding: 60px 0;
+            background-color: #171d3c;
+        }
+
+        .feature-box {
+            background-color: #22294c;
+            padding: 25px;
+            border-radius: 10px;
+            height: 100%;
+            transition: 0.3s;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-8px);
+            background-color: #2b335c;
+        }
+
+        .feature-box h4 {
+            color: #a99cff;
+            margin-bottom: 15px;
+        }
+
+        .feature-box p {
+            color: #ccccdd;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #080c20;
+            text-align: center;
+            padding: 20px;
+            color: #ccccdd;
+        }
+
+        /* Mobile screen */
+        @media (max-width: 768px) {
+            .home {
+                text-align: center;
+            }
+
+            .home h1 {
+                font-size: 36px;
+            }
+
+            .rocket {
+                font-size: 85px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                Space<span>Adventure</span>
+            </a>
+
+            <button class="navbar-toggler bg-light" type="button"
+                data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Explore</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Home section -->
+    <section class="home" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-md-6">
+                    <h1>
+                        Explore the <span>Universe</span>
+                    </h1>
+
+                    <p>
+                        Discover the beauty of space, explore new planets
+                        and learn about the amazing world beyond Earth.
+                        Your space adventure starts here!
+                    </p>
+
+                    <a href="#features" class="btn btn-custom mt-3">
+                        Explore More
+                    </a>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="rocket-box">
+                        <div class="rocket"></div>
+                        <h3>Journey Beyond Earth</h3>
+                        <p>Dream big. Explore space.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Features section -->
+    <section class="features" id="features">
+        <div class="container">
+
+            <h2 class="text-center mb-5">Explore Space</h2>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <h4> Planets</h4>
+                        <p>
+                            Learn about the planets in our solar system
+                            and their interesting features.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <h4> Galaxies</h4>
+                        <p>
+                            Discover distant galaxies and understand
+                            more about our huge universe.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <h4> Astronauts</h4>
+                        <p>
+                            Explore the life of astronauts and learn
+                            how humans travel into space.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p class="mb-0">
+            © 2026 Space Adventure | Created by a Student
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
